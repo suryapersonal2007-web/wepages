@@ -36,6 +36,7 @@
       margin: 15px 0;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      text-align: center;
     }
     footer {
       text-align: center;
@@ -63,12 +64,35 @@
     header {
       position: relative;
     }
+    /* Full image modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+  }
+
+  .modal.active {
+    display: flex;
+  }
   </style>
 </head>
 <body>
   <header>
-    <img src="surya.png" alt="Profile" class="profile-pic" />
-    <h1>SURYA M K</h1>
+    <img src="your-photo.jpg" alt="Profile" class="profile-pic" onclick="openModal()" />
+    <h1>SURYA M K </h1>
     <p>WebDesigner | Problem Solver | python master | SRMMCET STUDENT  </p>
     <nav>
       <a href="#about">About</a>
@@ -79,12 +103,12 @@
   </header>
 
   <section id="about">
-    <h2>About Me</h2>
+    <h2>SURYA M K</h2>
     <p>I am a passionate web developer skilled in HTML, CSS, JavaScript, and modern frameworks. I love building clean and efficient web applications. I am also completed python masterclass through udemy platform</p>
   </section>
 
   <section id="projects">
-    <h2>Projects</h2>
+    <h2>PROJECTS</h2>
     <div class="card">
       <h3>Project 1</h3>
       <p>LOADING 🔥.</p>
@@ -93,16 +117,33 @@
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: suryamk2007@gmail.com</p>
-    <button onclick="alert('Thanks for reaching out!')">Say Hello</button>
+    <h2>CONTACT</h2>
+    <p>E-MAIL: suryamk2007@gmail.com</p>
+    <p> PHONE : 7904523099 </p>
   </section>
+      <h1 style="text-align: left; margin-left: 130px;"> ACADEMIC </h1>
   <section id ="academic">
     <h2> I AM CURRENTLY PURSING B.Tech(IT) AT SRM MCET </h2>
     <h2> MY CURRENT CGPA IS 8.38</h2>    
   </section>
-  <footer>
+  <footer >
+        <button style="text-align: center;"onclick="alert('THANKS FOR VISITING MY WEB SITE!')">THANK YOU ❤️</button>
+
     <p> surya - gentle boy </p>
   </footer>
+  <!-- Modal for full image -->
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <img src="your-photo.jpg" alt="Full Profile" />
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById('imageModal').classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('imageModal').classList.remove('active');
+    }
+  </script>
 </body>
 </html>
