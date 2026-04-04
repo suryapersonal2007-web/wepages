@@ -1,15 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>surya web page </title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+    header {
+      background: #020617;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #38bdf8;
+      text-decoration: none;
+    }
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card {
+      background: #020617;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+    }
+    button {
+      background: #38bdf8;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-    <h1> hi guys iam surya </h1>
-    <h1> iam currently pursing b.tech(it) course at srmmcet </h1>
-    <h2> hi </h2>
-    <img width ="600px" height="700px" src ="image.jpg">
-    <p> the above image is my family and above content is my profile </p>
+  <header>
+    <h1>Your Name</h1>
+    <p>Web Developer | Problem Solver</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a passionate developer skilled in HTML, CSS, JavaScript, and modern frameworks. I love building clean and efficient web applications.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="card">
+      <h3>Project 1</h3>
+      <p>Short description of your project.</p>
+    </div>
+    <div class="card">
+      <h3>Project 2</h3>
+      <p>Short description of your project.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: your@email.com</p>
+    <button onclick="alert('Thanks for reaching out!')">Say Hello</button>
+  </section>
+
+  <footer>
+    <p>© 2026 Your Name</p>
+  </footer>
 </body>
 </html>
